@@ -37,12 +37,9 @@ d - вправо
 exit - выйти
 """
 show_display()  # вызов функции
-input()
+user_action = input(text_menu)
 
 while True:
-    os.system("cls")
-    user_action = input(text_menu)
-    
     if user_action == "w":
         print("Персонаж идет вверх")
         old_player_index = player_index
@@ -72,3 +69,5 @@ while True:
     else:
         print("Неправильная комманда")
     show_display()
+    user_action = input(text_menu)
+    os.system("cls")
